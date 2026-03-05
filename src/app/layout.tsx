@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/hero.jpg',
+        url: '/images/hero.png',
         width: 1200,
         height: 630,
         alt: 'Cerrajero El Paso - Professional Locksmith & Automotive Programming',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Cerrajero El Paso | Locksmith & Automotive Programming',
     description: 'Expert locksmith & automotive programming services. 24/7 emergency service in El Paso, TX.',
-    images: ['/images/hero.jpg'],
+    images: ['/images/hero.png'],
   },
   robots: {
     index: true,
@@ -85,7 +85,7 @@ export default function RootLayout({
     url: 'https://cerrajeroelpaso.com',
     logo: 'https://cerrajeroelpaso.com/images/logo.png',
     image: [
-      'https://cerrajeroelpaso.com/images/hero.jpg',
+      'https://cerrajeroelpaso.com/images/hero.png',
     ],
     description: 'Professional locksmith and automotive programming services in El Paso, TX. ECU programming, car key replacement, transponder services, and automotive electronics.',
     telephone: '+19152341995',

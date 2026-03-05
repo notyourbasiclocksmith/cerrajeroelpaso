@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-15',
     dateModified: '2025-01-15',
     readTime: '15 min read',
-    image: '/images/blog/el-paso-locksmith.jpg',
+    image: '/images/blog/el-paso-locksmith.png',
     category: 'Local Services',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -38,7 +38,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-12',
     dateModified: '2025-01-12',
     readTime: '14 min read',
-    image: '/images/blog/car-key-replacement.jpg',
+    image: '/images/blog/car-key-replacement.png',
     category: 'Automotive',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-10',
     dateModified: '2025-01-10',
     readTime: '16 min read',
-    image: '/images/blog/ecu-programming.jpg',
+    image: '/images/blog/ecu-programming.png',
     category: 'Technology',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-08',
     dateModified: '2025-01-08',
     readTime: '12 min read',
-    image: '/images/blog/emergency-lockout.jpg',
+    image: '/images/blog/emergency-lockout.png',
     category: 'Emergency Services',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -95,7 +95,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-01-05',
     dateModified: '2025-01-05',
     readTime: '13 min read',
-    image: '/images/blog/transponder-keys.jpg',
+    image: '/images/blog/transponder-keys.png',
     category: 'Automotive Technology',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-02-28',
     dateModified: '2025-02-28',
     readTime: '15 min read',
-    image: '/images/blog/smart-locks-home-security.jpg',
+    image: '/images/blog/smart-locks-home-security.png',
     category: 'Home Security',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-02-27',
     dateModified: '2025-02-27',
     readTime: '14 min read',
-    image: '/images/blog/avoid-locksmith-scams.jpg',
+    image: '/images/blog/avoid-locksmith-scams.png',
     category: 'Consumer Protection',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-02-24',
     dateModified: '2025-02-24',
     readTime: '15 min read',
-    image: '/images/blog/locksmith-vs-dealership.jpg',
+    image: '/images/blog/locksmith-vs-dealership.png',
     category: 'Automotive',
     author: 'Cerrajero El Paso Team',
     keywords: [
@@ -171,7 +171,7 @@ export const blogPosts: BlogPost[] = [
     date: '2025-02-25',
     dateModified: '2025-02-25',
     readTime: '14 min read',
-    image: '/images/blog/key-fob-troubleshooting.jpg',
+    image: '/images/blog/key-fob-troubleshooting.png',
     category: 'DIY & Troubleshooting',
     author: 'Cerrajero El Paso Team',
     keywords: [

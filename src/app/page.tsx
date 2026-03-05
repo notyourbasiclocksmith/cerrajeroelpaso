@@ -32,7 +32,7 @@ export default function Home() {
       <Hero
         title="El Paso's Premier Locksmith & Automotive Programming Services"
         subtitle="Expert ECU Programming | Advanced Key Programming | Professional Locksmith Solutions | 24/7 Emergency Service"
-        backgroundImage="/images/hero.jpg"
+        backgroundImage="/images/hero.png"
       />
 
       {/* Trust Bar */}
@@ -248,6 +248,18 @@ export default function Home() {
                 href={`/blog/${post.slug}/`}
                 className="group bg-warm-gray rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={340}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
                 <div className="p-7">
                   <span className="text-xs font-semibold text-secondary uppercase tracking-wider">
                     {post.category}

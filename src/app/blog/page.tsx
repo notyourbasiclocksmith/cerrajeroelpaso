@@ -35,6 +35,18 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}/`}
                 className="group bg-warm-gray rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/20"
               >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    loading="lazy"
+                    decoding="async"
+                    width={600}
+                    height={340}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
                 <div className="p-7">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs font-semibold text-secondary uppercase tracking-wider bg-secondary/10 px-3 py-1 rounded-full">

@@ -15,7 +15,7 @@ export function createMetadata({
   description,
   path = '',
   keywords = [],
-  image = '/images/hero.jpg',
+  image = '/images/hero.png',
 }: MetadataOptions): Metadata {
   const normalizedPath = path && !path.endsWith('/') ? `${path}/` : path
   const url = `${baseUrl}${normalizedPath}`
@@ -101,9 +101,9 @@ export function generateLocalBusinessSchema(city?: { name: string; state: string
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
     image: [
-      `${baseUrl}/images/hero.jpg`,
-      `${baseUrl}/images/ecu-programming.jpg`,
-      `${baseUrl}/images/key-programming.jpg`,
+      `${baseUrl}/images/hero.png`,
+      `${baseUrl}/images/ecu-programming.png`,
+      `${baseUrl}/images/key-programming.png`,
     ],
     description: city 
       ? `Professional locksmith and automotive programming services in ${city.name}, ${city.state}. ECU programming, key programming, transponder services, and automotive electronics.`

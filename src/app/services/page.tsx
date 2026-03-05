@@ -79,7 +79,7 @@ export default function Services() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30"
               >
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
-                  <img src={service.image} alt={`${service.name} - El Paso TX`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={service.image} alt={`${service.name} - El Paso TX`} loading="lazy" decoding="async" width={600} height={340} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-dark-gray group-hover:text-secondary transition-colors mb-2">{service.name}</h3>
@@ -114,7 +114,7 @@ export default function Services() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30"
               >
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
-                  <img src={service.image} alt={`${service.name} - El Paso TX`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={service.image} alt={`${service.name} - El Paso TX`} loading="lazy" decoding="async" width={600} height={340} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-dark-gray group-hover:text-secondary transition-colors mb-2">{service.name}</h3>
@@ -149,7 +149,7 @@ export default function Services() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30"
               >
                 <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
-                  <img src={service.image} alt={`${service.name} - El Paso TX`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={service.image} alt={`${service.name} - El Paso TX`} loading="lazy" decoding="async" width={600} height={340} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-dark-gray group-hover:text-secondary transition-colors mb-2">{service.name}</h3>

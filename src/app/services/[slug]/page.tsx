@@ -110,6 +110,21 @@ export default function ServicePage({ params }: ServicePageProps) {
         </div>
       </section>
 
+      {/* Service Featured Image */}
+      <div className="container mx-auto px-4 -mt-8 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src={service.image}
+              alt={`${service.name} service in El Paso TX`}
+              width={1200}
+              height={630}
+              className="w-full h-64 md:h-80 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Service Overview */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

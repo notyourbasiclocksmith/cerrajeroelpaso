@@ -26,6 +26,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# original unoptimized images
+/images/
+
 # vercel
 .vercel
 

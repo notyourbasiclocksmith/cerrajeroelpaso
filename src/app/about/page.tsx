@@ -30,18 +30,51 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-dark-gray mb-6">Our Story</h2>
-            <div className="text-gray-600 leading-relaxed space-y-4">
-              <p>
-                Cerrajero El Paso was founded with a simple mission: to provide the El Paso community with honest, professional, and affordable locksmith and automotive programming services. We understand that being locked out or needing key replacement can be stressful, which is why we focus on fast response times, fair pricing, and exceptional workmanship.
-              </p>
-              <p>
-                Our team of certified technicians specializes in both traditional locksmith services and advanced automotive electronics. From cutting-edge ECU programming to emergency lockout assistance, we have the skills, tools, and experience to handle any job — big or small.
-              </p>
-              <p>
-                We proudly serve El Paso and surrounding communities including Horizon City, Socorro, Fort Bliss, Las Cruces, and more. Our mobile service units bring our expertise directly to your location, saving you the hassle and expense of towing or traveling to a shop.
-              </p>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-dark-gray mb-6">Our Story</h2>
+              <div className="text-gray-600 leading-relaxed space-y-4">
+                <p>
+                  Cerrajero El Paso was founded with a simple mission: to provide the El Paso community with honest, professional, and affordable locksmith and automotive programming services. We understand that being locked out or needing key replacement can be stressful, which is why we focus on fast response times, fair pricing, and exceptional workmanship.
+                </p>
+                <p>
+                  Our team of certified technicians specializes in both traditional locksmith services and advanced automotive electronics. From cutting-edge ECU programming to emergency lockout assistance, we have the skills, tools, and experience to handle any job — big or small.
+                </p>
+                <p>
+                  We proudly serve El Paso and surrounding communities including Horizon City, Socorro, Fort Bliss, Las Cruces, and more. Our mobile service units bring our expertise directly to your location, saving you the hassle and expense of towing or traveling to a shop.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src="/images/locksmith-team.png"
+                  alt="Cerrajero El Paso professional locksmith technician"
+                  width={600}
+                  height={400}
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="/images/van-interior.png"
+                    alt="Cerrajero El Paso fully equipped mobile locksmith van"
+                    width={300}
+                    height={200}
+                    className="w-full h-40 object-cover"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src="/images/locksmith-tools.png"
+                    alt="Professional locksmith tools and equipment"
+                    width={300}
+                    height={200}
+                    className="w-full h-40 object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

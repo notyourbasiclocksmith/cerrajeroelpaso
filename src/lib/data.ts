@@ -293,7 +293,7 @@ export const services = [
     slug: 'automotive-locksmith',
     name: 'Automotive Locksmith',
     shortDesc: 'Complete car locksmith services including key replacement, programming, and emergency lockout.',
-    image: '/images/services/automotive-locksmith.jpg',
+    image: '/images/services/automotive-locksmith.png',
     icon: 'Car',
     features: [
       '24/7 emergency car lockout service',
@@ -316,7 +316,7 @@ export const services = [
     slug: 'car-key-replacement',
     name: 'Car Key Replacement',
     shortDesc: 'Lost car keys? We cut and program replacement keys for all vehicle makes and models.',
-    image: '/images/services/car-key-replacement.jpg',
+    image: '/images/services/car-key-replacement.png',
     icon: 'KeyRound',
     features: [
       'Same-day key replacement',
@@ -339,7 +339,7 @@ export const services = [
     slug: 'emergency-lockout',
     name: 'Emergency Lockout Service',
     shortDesc: '24/7 emergency lockout service for vehicles, homes, and businesses in El Paso.',
-    image: '/images/services/emergency-lockout.jpg',
+    image: '/images/services/emergency-lockout.png',
     icon: 'Shield',
     features: [
       '24/7 emergency availability',
@@ -362,7 +362,7 @@ export const services = [
     slug: 'ecu-programming',
     name: 'ECU & Computer Programming',
     shortDesc: 'Advanced ECU programming and automotive computer services for all vehicles.',
-    image: '/images/services/ecu-programming.jpg',
+    image: '/images/services/ecu-programming.png',
     icon: 'Cpu',
     features: [
       'Engine Control Unit programming',
@@ -385,7 +385,7 @@ export const services = [
     slug: 'transponder-key-programming',
     name: 'Transponder Key Programming',
     shortDesc: 'Expert transponder chip programming for vehicle security systems.',
-    image: '/images/services/transponder-key-programming.jpg',
+    image: '/images/services/transponder-key-programming.png',
     icon: 'Radio',
     features: [
       'All transponder types supported',
@@ -408,7 +408,7 @@ export const services = [
     slug: 'ignition-repair',
     name: 'Ignition Repair & Replacement',
     shortDesc: 'Professional ignition switch repair, replacement, and key extraction.',
-    image: '/images/services/ignition-repair.jpg',
+    image: '/images/services/ignition-repair.png',
     icon: 'Zap',
     features: [
       'Ignition cylinder replacement',
@@ -431,7 +431,7 @@ export const services = [
     slug: 'residential-locksmith',
     name: 'Residential Locksmith',
     shortDesc: 'Complete home locksmith services including lock installation, rekeying, and security upgrades.',
-    image: '/images/services/residential-locksmith.jpg',
+    image: '/images/services/residential-locksmith.png',
     icon: 'Home',
     features: [
       'Lock installation and replacement',
@@ -454,7 +454,7 @@ export const services = [
     slug: 'commercial-locksmith',
     name: 'Commercial Locksmith',
     shortDesc: 'Business security solutions including access control, master key systems, and more.',
-    image: '/images/services/commercial-locksmith.jpg',
+    image: '/images/services/commercial-locksmith.png',
     icon: 'Building',
     features: [
       'Master key system design',
@@ -477,7 +477,7 @@ export const services = [
     slug: 'lock-rekeying',
     name: 'Lock Rekeying',
     shortDesc: 'Professional lock rekeying for homes and businesses without replacing the entire lock.',
-    image: '/images/services/lock-rekeying.jpg',
+    image: '/images/services/lock-rekeying.png',
     icon: 'RefreshCw',
     features: [
       'Residential lock rekeying',
@@ -500,7 +500,7 @@ export const services = [
     slug: 'key-duplication',
     name: 'Key Duplication',
     shortDesc: 'Precision key cutting and duplication for all key types.',
-    image: '/images/services/key-duplication.jpg',
+    image: '/images/services/key-duplication.png',
     icon: 'Copy',
     features: [
       'Standard key duplication',
@@ -523,7 +523,7 @@ export const services = [
     slug: 'smart-key-programming',
     name: 'Smart Key & Keyless Entry',
     shortDesc: 'Smart key programming, keyless entry, and push-to-start system services.',
-    image: '/images/services/smart-key-programming.jpg',
+    image: '/images/services/smart-key-programming.png',
     icon: 'Smartphone',
     features: [
       'Smart key programming',
@@ -546,7 +546,7 @@ export const services = [
     slug: 'safe-opening',
     name: 'Safe Opening & Repair',
     shortDesc: 'Professional safe opening, combination changes, and safe repair services.',
-    image: '/images/services/safe-opening.jpg',
+    image: '/images/services/safe-opening.png',
     icon: 'Lock',
     features: [
       'Safe opening service',
@@ -569,7 +569,7 @@ export const services = [
     slug: 'module-programming',
     name: 'ECM/TCM/BCM/ABS Module Programming',
     shortDesc: 'Advanced control module programming for ECM, TCM, BCM, and ABS systems - all years, makes, and models.',
-    image: '/images/services/module-programming.jpg',
+    image: '/images/services/module-programming.png',
     icon: 'Cpu',
     features: [
       'Engine Control Module (ECM) programming',
@@ -592,7 +592,7 @@ export const services = [
     slug: 'airbag-reset-crash-module',
     name: 'Airbag Reset & Crash Module Repair',
     shortDesc: 'Professional airbag module reset and crash data clearing after accidents.',
-    image: '/images/services/airbag-reset-crash-module.jpg',
+    image: '/images/services/airbag-reset-crash-module.png',
     icon: 'Shield',
     features: [
       'Airbag control module reset',
@@ -615,7 +615,7 @@ export const services = [
     slug: 'mercedes-elv-steering-lock-repair',
     name: 'Mercedes ELV Steering Lock Repair (W204)',
     shortDesc: 'Expert Electronic Steering Lock (ELV) repair and replacement for Mercedes-Benz W204 and other models.',
-    image: '/images/services/mercedes-elv-steering-lock-repair.jpg',
+    image: '/images/services/mercedes-elv-steering-lock-repair.png',
     icon: 'Car',
     features: [
       'Mercedes W204 ELV repair',
@@ -638,7 +638,7 @@ export const services = [
     slug: 'bmw-frm-repair',
     name: 'BMW FRM Footwell Module Repair',
     shortDesc: 'Professional BMW FRM (Footwell Module) repair and programming services.',
-    image: '/images/services/bmw-frm-repair.jpg',
+    image: '/images/services/bmw-frm-repair.png',
     icon: 'Wrench',
     features: [
       'FRM module repair and replacement',
@@ -661,7 +661,7 @@ export const services = [
     slug: 'dodge-chrysler-win-module',
     name: 'Dodge/Chrysler WIN Module & FOBIK Programming',
     shortDesc: 'WIN module replacement and FOBIK key programming for Dodge and Chrysler vehicles.',
-    image: '/images/services/dodge-chrysler-win-module.jpg',
+    image: '/images/services/dodge-chrysler-win-module.png',
     icon: 'Radio',
     features: [
       'WIN module replacement',
@@ -684,7 +684,7 @@ export const services = [
     slug: 'performance-tuning',
     name: 'Performance Tuning & ECU Remapping',
     shortDesc: 'Professional ECU tuning and remapping services for all makes and models.',
-    image: '/images/services/performance-tuning.jpg',
+    image: '/images/services/performance-tuning.png',
     icon: 'Zap',
     features: [
       'ECU remapping and tuning',
@@ -707,7 +707,7 @@ export const services = [
     slug: 'vw-immo-off',
     name: 'VW Immobilizer Off (IMMO OFF)',
     shortDesc: 'Volkswagen and Audi immobilizer delete and IMMO OFF programming services.',
-    image: '/images/services/vw-immo-off.jpg',
+    image: '/images/services/vw-immo-off.png',
     icon: 'ShieldOff',
     features: [
       'Immobilizer delete (IMMO OFF)',
@@ -730,7 +730,7 @@ export const services = [
     slug: 'gm-vats-bypass',
     name: 'GM VATS Bypass & Disable',
     shortDesc: 'Professional GM VATS (Vehicle Anti-Theft System) bypass and disable services.',
-    image: '/images/services/gm-vats-bypass.jpg',
+    image: '/images/services/gm-vats-bypass.png',
     icon: 'Key',
     features: [
       'VATS bypass installation',
@@ -753,7 +753,7 @@ export const services = [
     slug: 'dodge-chrysler-vin-swap',
     name: 'Dodge/Chrysler VIN Swap & Programming',
     shortDesc: 'Professional VIN programming and swap services for Dodge and Chrysler control modules.',
-    image: '/images/services/dodge-chrysler-vin-swap.jpg',
+    image: '/images/services/dodge-chrysler-vin-swap.png',
     icon: 'FileText',
     features: [
       'VIN swap programming',
@@ -776,7 +776,7 @@ export const services = [
     slug: 'saab-steering-lock-bypass',
     name: 'Saab Steering Lock Bypass',
     shortDesc: 'Expert Saab steering column lock bypass and repair services.',
-    image: '/images/services/saab-steering-lock-bypass.jpg',
+    image: '/images/services/saab-steering-lock-bypass.png',
     icon: 'Unlock',
     features: [
       'Saab steering lock bypass',
