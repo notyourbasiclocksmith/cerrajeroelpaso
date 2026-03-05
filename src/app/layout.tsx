@@ -88,7 +88,7 @@ export default function RootLayout({
       'https://cerrajeroelpaso.com/images/hero.jpg',
     ],
     description: 'Professional locksmith and automotive programming services in El Paso, TX. ECU programming, car key replacement, transponder services, and automotive electronics.',
-    telephone: '+19150000000',
+    telephone: '+19152341995',
     email: 'contact@cerrajeroelpaso.com',
     priceRange: '$$',
     address: {

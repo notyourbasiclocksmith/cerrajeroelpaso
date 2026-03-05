@@ -120,7 +120,7 @@ export default function Header() {
                   className="flex items-center justify-center gap-2 bg-white/10 text-white px-6 py-3.5 rounded-xl font-bold transition border border-white/10"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Text Us Now
+                  Text Us
                 </a>
               </div>
             </nav>

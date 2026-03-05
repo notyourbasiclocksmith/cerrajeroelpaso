@@ -100,7 +100,7 @@ export default function ServicePage({ params }: ServicePageProps) {
                 <Phone className="w-5 h-5" /> Call {businessInfo.phone}
               </a>
               <a href={`sms:${businessInfo.textPhone}`} className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/20">
-                <MessageCircle className="w-5 h-5" /> Text Us Now
+                <MessageCircle className="w-5 h-5" /> Text Us
               </a>
               <Link href="/contact/" className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-[1.03]">
                 Get Free Quote
@@ -206,7 +206,7 @@ export default function ServicePage({ params }: ServicePageProps) {
               <Phone className="w-5 h-5" /> Call {businessInfo.phone}
             </a>
             <a href={`sms:${businessInfo.textPhone}`} className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/20">
-              <MessageCircle className="w-5 h-5" /> Text Us Now
+              <MessageCircle className="w-5 h-5" /> Text Us
             </a>
             <Link href="/contact/" className="inline-flex items-center justify-center bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:scale-[1.03] border border-accent/50">
               Get Free Quote

@@ -187,7 +187,7 @@ export default function Services() {
               className="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/20"
             >
               <MessageCircle className="w-5 h-5" />
-              Text Us Now
+              Text Us
             </a>
             <Link
               href="/contact/"

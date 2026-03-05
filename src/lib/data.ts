@@ -811,9 +811,9 @@ export const businessInfo = {
   name: 'Cerrajero El Paso - Locksmith & Programming',
   tagline: 'Expert Locksmith & Automotive Programming Services in El Paso',
   shortName: 'Cerrajero El Paso',
-  phone: '(915) 000-0000',
-  phoneRaw: '+19150000000',
-  textPhone: '+19150000000',
+  phone: '(915) 234-1995',
+  phoneRaw: '+19152341995',
+  textPhone: '+18175869634',
   email: 'contact@cerrajeroelpaso.com',
   domain: 'https://cerrajeroelpaso.com',
   address: {

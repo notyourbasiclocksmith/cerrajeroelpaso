@@ -32,7 +32,7 @@ export default function CTASection() {
             className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:bg-white/20"
           >
             <MessageCircle className="w-5 h-5" />
-            Text Us Now
+            Text Us
           </a>
           <a
             href="/contact/"
