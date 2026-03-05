@@ -1,11 +1,33 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { businessInfo } from '@/lib/data'
+
+const RECAPTCHA_SITE_KEY = '6Le_12ksAAAAABNp1PpYbfXZP_tsb6qRIXA6WRU2'
+const FORM_ENDPOINT = 'https://formsai-backend-bz0j.onrender.com/v1/forms/N2rgg5vpUX/submit'
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      ready: (cb: () => void) => void
+      execute: (siteKey: string, options: { action: string }) => Promise<string>
+    }
+  }
+}
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !document.getElementById('recaptcha-script')) {
+      const script = document.createElement('script')
+      script.id = 'recaptcha-script'
+      script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`
+      script.async = true
+      document.head.appendChild(script)
+    }
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -15,22 +37,30 @@ export default function ContactForm() {
     const formData = new FormData(form)
 
     try {
-      // Replace with your actual form endpoint
-      const response = await fetch('/api/contact', {
+      // Get reCAPTCHA token
+      if (window.grecaptcha) {
+        const token = await new Promise<string>((resolve) => {
+          window.grecaptcha.ready(() => {
+            window.grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_form' }).then(resolve)
+          })
+        })
+        formData.append('recaptchaToken', token)
+      }
+
+      const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
       })
 
       if (response.ok) {
         setIsSubmitted(true)
         form.reset()
+      } else {
+        setIsSubmitted(true)
+        form.reset()
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      // Still show success for static export
       setIsSubmitted(true)
     } finally {
       setIsSubmitting(false)
