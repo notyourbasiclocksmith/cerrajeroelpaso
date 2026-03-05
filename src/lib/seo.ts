@@ -109,7 +109,7 @@ export function generateLocalBusinessSchema(city?: { name: string; state: string
       ? `Professional locksmith and automotive programming services in ${city.name}, ${city.state}. ECU programming, key programming, transponder services, and automotive electronics.`
       : 'Professional locksmith and automotive programming services in El Paso, TX. ECU programming, key programming, transponder services, and automotive electronics.',
     telephone: '+19152341995',
-    email: 'contact@cerrajeroelpaso.com',
+    email: 'contact@thekeybot.com',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
@@ -259,7 +259,7 @@ export function generateServiceSchema({
       '@type': 'Locksmith',
       name: 'Cerrajero El Paso - Locksmith & Programming',
       telephone: '+19152341995',
-      email: 'contact@cerrajeroelpaso.com',
+      email: 'contact@thekeybot.com',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'El Paso',

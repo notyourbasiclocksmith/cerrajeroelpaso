@@ -814,7 +814,7 @@ export const businessInfo = {
   phone: '(915) 234-1995',
   phoneRaw: '+19152341995',
   textPhone: '+18175869634',
-  email: 'contact@cerrajeroelpaso.com',
+  email: 'contact@thekeybot.com',
   domain: 'https://cerrajeroelpaso.com',
   address: {
     street: 'El Paso',

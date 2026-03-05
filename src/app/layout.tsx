@@ -89,7 +89,7 @@ export default function RootLayout({
     ],
     description: 'Professional locksmith and automotive programming services in El Paso, TX. ECU programming, car key replacement, transponder services, and automotive electronics.',
     telephone: '+19152341995',
-    email: 'contact@cerrajeroelpaso.com',
+    email: 'contact@thekeybot.com',
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
