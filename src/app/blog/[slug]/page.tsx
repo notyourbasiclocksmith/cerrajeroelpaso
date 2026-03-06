@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-data'
-import { createMetadata, generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo'
+import { createMetadataEs, generateArticleSchema, generateBreadcrumbSchema } from '@/lib/seo-es'
 import { ArrowLeft, Clock, User, ArrowRight } from 'lucide-react'
 
 interface BlogPostPageProps {
@@ -16,7 +16,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const post = blogPosts.find(p => p.slug === params.slug)
   if (!post) return {}
-  return createMetadata({
+  return createMetadataEs({
     title: post.title,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
@@ -40,7 +40,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   })
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: '/' },
+    { name: 'Inicio', url: '/' },
     { name: 'Blog', url: '/blog' },
     { name: post.title, url: `/blog/${post.slug}` },
   ])
@@ -58,7 +58,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               <nav className="text-gray-400 text-sm mb-6">
-                <Link href="/" className="hover:text-secondary transition">Home</Link>
+                <Link href="/" className="hover:text-secondary transition">Inicio</Link>
                 <span className="mx-2">/</span>
                 <Link href="/blog/" className="hover:text-secondary transition">Blog</Link>
                 <span className="mx-2">/</span>
@@ -103,16 +103,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="max-w-4xl mx-auto prose prose-lg">
               <p className="text-xl text-gray-600 leading-relaxed mb-8">{post.excerpt}</p>
               <div className="bg-warm-gray rounded-2xl p-8 border border-gray-100 mb-8">
-                <h2 className="text-2xl font-bold text-dark-gray mb-4">Key Takeaways</h2>
+                <h2 className="text-2xl font-bold text-dark-gray mb-4">Puntos Clave</h2>
                 <ul className="space-y-2 text-gray-600">
-                  <li>Professional locksmith services save you time and money compared to dealerships</li>
-                  <li>Always verify your locksmith is licensed and insured before hiring</li>
-                  <li>Modern vehicles require specialized equipment for key programming</li>
-                  <li>24/7 emergency service is available for urgent lockout situations</li>
+                  <li>Un cerrajero profesional le ahorra tiempo y dinero comparado con la agencia</li>
+                  <li>Siempre verifique que su cerrajero esté licenciado y asegurado</li>
+                  <li>Los vehículos modernos requieren equipo especializado para programación de llaves</li>
+                  <li>El servicio de emergencia 24/7 está disponible para situaciones urgentes</li>
                 </ul>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                For professional locksmith and automotive programming services in El Paso, contact Cerrajero El Paso. Our certified technicians are available 24/7 for emergency service and offer competitive pricing on all services.
+                Para servicios profesionales de cerrajería automotriz en El Paso, contacte a Cerrajero El Paso. Nuestros técnicos certificados están disponibles 24/7 para servicio de emergencia y ofrecemos precios competitivos en todos los servicios.
               </p>
             </div>
           </div>
@@ -122,10 +122,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link href="/blog/" className="inline-flex items-center gap-2 text-secondary font-semibold hover:underline">
-                <ArrowLeft className="w-4 h-4" /> Back to Blog
+                <ArrowLeft className="w-4 h-4" /> Volver al Blog
               </Link>
-              <Link href="/contact/" className="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-highlight text-primary px-6 py-3 rounded-xl font-bold transition-all hover:shadow-lg">
-                Get a Free Quote <ArrowRight className="w-4 h-4" />
+              <Link href="/contacto/" className="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-highlight text-primary px-6 py-3 rounded-xl font-bold transition-all hover:shadow-lg">
+                Cotización Gratis <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

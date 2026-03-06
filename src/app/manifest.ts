@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Cerrajero El Paso - Locksmith & Programming',
+    name: 'Cerrajero El Paso - Cerrajero Automotriz Móvil',
     short_name: 'Cerrajero EP',
-    description: 'Professional locksmith and automotive programming services in El Paso, TX.',
+    description: 'Cerrajero automotriz móvil en El Paso, TX. Reemplazo de llaves, programación, lockout. Servicio 24/7.',
     start_url: '/',
     display: 'standalone',
     background_color: '#0a0f1c',

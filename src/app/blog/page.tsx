@@ -1,14 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { blogPosts } from '@/lib/blog-data'
-import { createMetadata } from '@/lib/seo'
+import { createMetadataEs } from '@/lib/seo-es'
 import { ArrowRight } from 'lucide-react'
 
-export const metadata: Metadata = createMetadata({
-  title: 'Locksmith Blog & Guides | Cerrajero El Paso',
-  description: 'Expert locksmith tips, automotive programming guides, and security advice from the Cerrajero El Paso team. Learn about car keys, ECU programming, home security, and more.',
+export const metadata: Metadata = createMetadataEs({
+  title: 'Blog | Cerrajero El Paso | Guías de Llaves y Cerrajería',
+  description: 'Consejos de cerrajería automotriz, guías de llaves de carro, y artículos informativos del equipo de Cerrajero El Paso. Aprenda sobre llaves transponder, key fob, y más.',
   path: '/blog',
-  keywords: ['locksmith blog', 'car key guide', 'ECU programming guide', 'locksmith tips El Paso', 'cerrajero blog'],
+  keywords: ['blog cerrajero', 'guía llaves de carro', 'cerrajero consejos El Paso', 'llave transponder guía'],
 })
 
 export default function BlogPage() {
@@ -19,9 +19,9 @@ export default function BlogPage() {
           <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog & Guides</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Blog y Guías</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Expert tips, guides, and insights from our certified locksmith team
+            Consejos, guías, y artículos informativos de nuestro equipo de cerrajeros certificados
           </p>
         </div>
       </section>
@@ -63,7 +63,7 @@ export default function BlogPage() {
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-400">{post.date}</span>
                     <span className="text-secondary font-semibold text-sm group-hover:underline inline-flex items-center gap-1">
-                      Read More <ArrowRight className="w-3 h-3" />
+                      Leer Más <ArrowRight className="w-3 h-3" />
                     </span>
                   </div>
                 </div>

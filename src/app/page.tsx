@@ -4,34 +4,30 @@ import Hero from '@/components/Hero'
 import Testimonials from '@/components/Testimonials'
 import CTASection from '@/components/CTASection'
 import ContactForm from '@/components/ContactForm'
-import { cities, services, businessInfo } from '@/lib/data'
-import { blogPosts } from '@/lib/blog-data'
-import { generateLocalBusinessSchema } from '@/lib/seo'
-import { MapPin, Wrench, Phone, Clock, Shield, Star, ArrowRight, CheckCircle } from 'lucide-react'
+import { serviciosEs, vehicleBrands, areasServicio, businessInfoEs } from '@/lib/data-es'
+import { generateLocalBusinessSchema } from '@/lib/seo-es'
+import { MapPin, Wrench, Phone, Shield, Star, ArrowRight, CheckCircle, Car } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Cerrajero El Paso | Expert Locksmith & Automotive Programming | 24/7',
-  description: 'Professional locksmith & automotive programming services in El Paso, TX. ECU programming, car key replacement, transponder keys, emergency lockout. 24/7 service. Licensed & insured. Call now!',
+  title: 'Cerrajero El Paso | Cerrajero Automotriz Móvil | Llaves de Carro 24/7',
+  description: 'Cerrajero automotriz móvil en El Paso, TX. Reemplazo de llaves de carro, programación de llaves, key fob, abrir carro, reparación de ignición. Servicio 24/7. (915) 234-1995.',
   openGraph: {
-    title: 'Cerrajero El Paso - Locksmith & Automotive Programming',
-    description: 'Expert locksmith & automotive programming services in El Paso, TX. 24/7 emergency service available.',
+    title: 'Cerrajero El Paso - Cerrajero Automotriz Móvil 24/7',
+    description: 'Cerrajero automotriz móvil en El Paso. Reemplazo de llaves, programación, lockout. Servicio 24/7.',
     url: 'https://cerrajeroelpaso.com',
   },
 }
 
 export default function Home() {
-  const localBusinessSchema = generateLocalBusinessSchema(undefined, true)
+  const localBusinessSchema = generateLocalBusinessSchema()
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       <Hero
-        title="El Paso's Premier Locksmith & Automotive Programming Services"
-        subtitle="Expert ECU Programming | Advanced Key Programming | Professional Locksmith Solutions | 24/7 Emergency Service"
+        title="Cerrajero Automotriz Móvil en El Paso, Texas"
+        subtitle="Reemplazo de Llaves de Carro | Programación de Llaves | Abrir Carro | Key Fob | Servicio 24/7"
         backgroundImage="/images/hero.png"
       />
 
@@ -41,101 +37,71 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 text-center">
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-secondary" />
-              <span className="text-sm font-semibold text-dark-gray">Licensed & Insured</span>
+              <span className="text-sm font-semibold text-dark-gray">Licenciado y Asegurado</span>
             </div>
             <div className="hidden md:block w-1 h-1 bg-gray-300 rounded-full" />
             <div className="flex items-center gap-2">
               <CheckCircle className="w-5 h-5 text-secondary" />
-              <span className="text-sm text-gray-600">Certified Automotive Specialists</span>
+              <span className="text-sm text-gray-600">Especialistas Automotrices Certificados</span>
             </div>
             <div className="hidden md:block w-1 h-1 bg-gray-300 rounded-full" />
             <div className="flex items-center gap-2">
               <Star className="w-5 h-5 text-secondary fill-secondary" />
-              <span className="text-sm text-gray-600">4.9 Stars | 89+ Reviews</span>
+              <span className="text-sm text-gray-600">4.9 Estrellas | 89+ Reseñas</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Servicios */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 rounded-full px-5 py-2 mb-5">
               <Wrench className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-semibold text-secondary">Our Services</span>
+              <span className="text-sm font-semibold text-secondary">Nuestros Servicios</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
-              Complete Locksmith & Programming Solutions
+              Servicios de Cerrajería Automotriz
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              From ECU programming to emergency lockout assistance — expert services for vehicles, homes, and businesses
+              Desde reemplazo de llaves hasta apertura de carros — soluciones profesionales para conductores en El Paso
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {services.slice(0, 9).map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}/`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30"
-              >
-                <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/5">
-                  <img
-                    src={service.image}
-                    alt={`${service.name} - El Paso TX`}
-                    loading="lazy"
-                    decoding="async"
-                    width={662}
-                    height={372}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {serviciosEs.map((svc) => (
+              <Link key={svc.slug} href={`/${svc.slug}/`} className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 hover:border-secondary/30">
+                <div className="relative h-44 overflow-hidden">
+                  <img src={svc.image} alt={`${svc.name} en El Paso TX`} loading="lazy" decoding="async" width={600} height={340} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-dark-gray group-hover:text-secondary transition-colors mb-2">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-500 text-sm mb-4 line-clamp-2">{service.shortDesc}</p>
+                <div className="p-5">
+                  <h3 className="text-base font-bold text-dark-gray group-hover:text-secondary transition-colors mb-2">{svc.name}</h3>
+                  <p className="text-gray-500 text-sm mb-3 line-clamp-2">{svc.shortDesc}</p>
                   <div className="text-secondary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Ver Más <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/services/"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:shadow-lg"
-            >
-              View All {services.length} Services
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* ¿Por qué elegirnos? */}
       <section className="py-20 bg-warm-gray">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
-              Why Choose Cerrajero El Paso?
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Trusted by hundreds of El Paso residents and businesses
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">¿Por Qué Elegir Cerrajero El Paso?</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">La confianza de cientos de conductores y residentes de El Paso</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
-              { icon: '🏆', title: 'Certified Technicians', desc: 'Trained and certified in the latest automotive electronics and locksmith techniques' },
-              { icon: '⚡', title: 'Fast Response', desc: '30-minute average response time for emergency calls across El Paso' },
-              { icon: '💰', title: 'Fair Pricing', desc: 'Competitive rates, often 40-60% less than dealership prices' },
-              { icon: '🔧', title: 'Latest Equipment', desc: 'State-of-the-art diagnostic and programming tools for all makes and models' },
+              { icon: '⚡', title: 'Respuesta Rápida', desc: 'Llegamos en 30 minutos promedio a cualquier ubicación en El Paso y áreas cercanas' },
+              { icon: '💰', title: 'Precios Justos', desc: 'Hasta 50% más barato que la agencia. Sin cargos ocultos ni sorpresas' },
+              { icon: '�', title: 'Equipo Avanzado', desc: 'Herramientas de diagnóstico y programación de última generación para todas las marcas' },
+              { icon: '🏆', title: 'Técnicos Certificados', desc: 'Profesionales entrenados en electrónica automotriz y cerrajería avanzada' },
             ].map((item, i) => (
               <div key={i} className="text-center group">
                 <div className="w-16 h-16 bg-white rounded-2xl shadow-md flex items-center justify-center mx-auto mb-5 group-hover:shadow-lg group-hover:-translate-y-1 transition-all border border-gray-100">
@@ -149,76 +115,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Cities We Serve */}
+      {/* Marcas de Vehículos */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 rounded-full px-5 py-2 mb-5">
-              <MapPin className="w-4 h-4 text-secondary" />
-              <span className="text-sm font-semibold text-secondary">Service Areas</span>
+              <Car className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-semibold text-secondary">Todas las Marcas</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
-              Serving El Paso & Surrounding Areas
+              Hacemos Llaves Para Todas las Marcas
             </h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              Professional locksmith and automotive programming services throughout the El Paso metropolitan area
+              Servicio profesional de cerrajería automotriz para {vehicleBrands.length} marcas de vehículos
             </p>
           </div>
+          <div className="grid grid-cols-3 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+            {vehicleBrands.map((brand) => (
+              <Link key={brand.slug} href={`/reemplazo-llave-${brand.slug}-el-paso/`} className="group bg-warm-gray hover:bg-white rounded-xl p-4 text-center transition-all hover:-translate-y-1 hover:shadow-lg border border-transparent hover:border-secondary/20">
+                <div className="font-bold text-dark-gray group-hover:text-secondary transition-colors text-sm">{brand.name}</div>
+                <div className="text-[11px] text-gray-400 mt-1">{brand.models.length} modelos</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-10">
-            {cities.map((city) => (
-              <Link
-                key={city.slug}
-                href={`/cities/${city.slug}/`}
-                className="group bg-warm-gray hover:bg-white rounded-xl p-4 transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-secondary/20 hover:shadow-lg"
-              >
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-secondary flex-shrink-0" />
+      {/* Áreas de Servicio */}
+      <section className="py-20 bg-warm-gray">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/20 rounded-full px-5 py-2 mb-5">
+              <MapPin className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-semibold text-secondary">Áreas de Servicio</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">Servimos Todo El Paso y Alrededores</h2>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              Cerrajero automotriz móvil con cobertura en todo El Paso, Horizon City, Socorro, y más. Sobre la I-10, US-54, y Loop 375.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-10">
+            {areasServicio.map((area) => (
+              <Link key={area.slug} href={`/areas/${area.slug}/`} className="group bg-white rounded-xl p-5 transition-all hover:-translate-y-1 hover:shadow-lg border border-gray-100 hover:border-secondary/20">
+                <div className="flex items-center gap-3">
+                  <MapPin className="w-5 h-5 text-secondary flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-sm text-dark-gray group-hover:text-secondary transition-colors">
-                      {city.name}
-                    </h3>
-                    <p className="text-[11px] text-gray-400">{city.state}</p>
+                    <h3 className="font-bold text-dark-gray group-hover:text-secondary transition-colors">{area.name}</h3>
+                    <p className="text-xs text-gray-400">ZIP: {area.zipCodes.join(', ')}</p>
                   </div>
                 </div>
               </Link>
             ))}
           </div>
-
           <div className="text-center">
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={`tel:${businessInfo.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-highlight text-primary px-6 py-3 rounded-xl font-bold transition-all hover:shadow-lg"
-              >
-                <Phone className="w-5 h-5" />
-                Call {businessInfo.phone}
-              </a>
-              <Link
-                href="/cities/"
-                className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-xl font-bold transition-all"
-              >
-                View All Service Areas
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
+            <a href={`tel:${businessInfoEs.phoneRaw}`} className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-secondary to-highlight text-primary px-8 py-4 rounded-xl font-bold text-lg transition-all hover:shadow-lg">
+              <Phone className="w-5 h-5" /> Llamar {businessInfoEs.phone}
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Stats Bar */}
+      {/* Stats */}
       <section className="py-14 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-secondary/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-secondary/5 rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
             {[
-              { value: `${cities.length}+`, label: 'Areas Served' },
-              { value: `${services.length}+`, label: 'Services Offered' },
-              { value: '24/7', label: 'Emergency Service' },
-              { value: '89+', label: '5-Star Reviews' },
+              { value: '15+', label: 'Marcas de Vehículos' },
+              { value: '8', label: 'Servicios Principales' },
+              { value: '24/7', label: 'Servicio de Emergencia' },
+              { value: '89+', label: 'Reseñas 5 Estrellas' },
             ].map((stat, i) => (
               <div key={i}>
                 <div className="text-4xl font-bold mb-2 gradient-text">{stat.value}</div>
@@ -229,83 +197,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Posts */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
-              Latest Tips & Guides
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Expert advice from our certified locksmith team
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPosts.slice(0, 3).map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}/`}
-                className="group bg-warm-gray rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    loading="lazy"
-                    decoding="async"
-                    width={600}
-                    height={340}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-                </div>
-                <div className="p-7">
-                  <span className="text-xs font-semibold text-secondary uppercase tracking-wider">
-                    {post.category}
-                  </span>
-                  <h3 className="text-lg font-bold text-dark-gray mt-3 mb-3 group-hover:text-secondary transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-500 text-sm line-clamp-3 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span>{post.readTime}</span>
-                    <span className="text-secondary font-semibold group-hover:underline flex items-center gap-1">
-                      Read More <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/blog/"
-              className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-xl font-semibold transition-all"
-            >
-              View All Articles
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <Testimonials />
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      {/* Contacto */}
+      <section id="contacto" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
-                Get Expert Service Today
-              </h2>
-              <p className="text-gray-600 text-lg">
-                Fill out the form below and we&apos;ll get back to you with a free quote
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">Obtenga Servicio Hoy</h2>
+              <p className="text-gray-600 text-lg">Complete el formulario y le responderemos con una cotización gratis</p>
             </div>
             <div className="bg-warm-gray rounded-2xl p-8 md:p-10 shadow-lg border border-gray-100">
               <ContactForm />

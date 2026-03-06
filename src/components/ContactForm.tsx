@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { businessInfo } from '@/lib/data'
+import { businessInfoEs, serviciosEs } from '@/lib/data-es'
 
 const FORM_ENDPOINT = 'https://formsai-backend-bz0j.onrender.com/v1/forms/N2rgg5vpUX/submit'
 
@@ -45,9 +45,9 @@ export default function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-dark-gray mb-2">Thank You!</h3>
+        <h3 className="text-2xl font-bold text-dark-gray mb-2">¡Gracias!</h3>
         <p className="text-gray-600">
-          We&apos;ve received your message and will get back to you shortly.
+          Hemos recibido su mensaje y nos comunicaremos con usted pronto.
         </p>
       </div>
     )
@@ -58,7 +58,7 @@ export default function ContactForm() {
       <div className="grid md:grid-cols-2 gap-5">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-            Your Name *
+            Su Nombre *
           </label>
           <input
             type="text"
@@ -66,12 +66,12 @@ export default function ContactForm() {
             name="name"
             required
             className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition text-gray-800"
-            placeholder="John Doe"
+            placeholder="Juan Pérez"
           />
         </div>
         <div>
           <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-            Phone Number *
+            Teléfono *
           </label>
           <input
             type="tel"
@@ -86,7 +86,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-          Email Address
+          Correo Electrónico
         </label>
         <input
           type="email"
@@ -99,42 +99,37 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
-          Service Needed
+          Servicio Necesitado
         </label>
         <select
           id="service"
           name="service"
           className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition text-gray-800"
         >
-          <option value="">Select a service...</option>
-          <option value="ECU Programming">ECU Programming</option>
-          <option value="Transponder Key Programming">Transponder Key Programming</option>
-          <option value="Car Key Replacement">Car Key Replacement</option>
-          <option value="Emergency Lockout">Emergency Lockout</option>
-          <option value="Smart Key Programming">Smart Key Programming</option>
-          <option value="Ignition Repair">Ignition Repair</option>
-          <option value="Residential Locksmith">Residential Locksmith</option>
-          <option value="Commercial Locksmith">Commercial Locksmith</option>
-          <option value="Other">Other</option>
+          <option value="">Seleccione un servicio...</option>
+          {serviciosEs.map(svc => (
+            <option key={svc.slug} value={svc.name}>{svc.name}</option>
+          ))}
+          <option value="Otro">Otro</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="vehicle" className="block text-sm font-semibold text-gray-700 mb-2">
-          Vehicle Make/Model/Year (if applicable)
+          Marca/Modelo/Año del Vehículo (si aplica)
         </label>
         <input
           type="text"
           id="vehicle"
           name="vehicle"
           className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition text-gray-800"
-          placeholder="e.g., 2020 Toyota Camry"
+          placeholder="ej. 2020 Toyota Camry"
         />
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-          How Can We Help? *
+          ¿Cómo Podemos Ayudarle? *
         </label>
         <textarea
           id="message"
@@ -142,7 +137,7 @@ export default function ContactForm() {
           required
           rows={4}
           className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-secondary/50 focus:border-secondary outline-none transition resize-none text-gray-800"
-          placeholder="Tell us about your locksmith or programming needs..."
+          placeholder="Cuéntenos sobre su problema con las llaves o cerraduras..."
         />
       </div>
 
@@ -151,15 +146,15 @@ export default function ContactForm() {
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-secondary to-highlight text-primary font-bold py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-secondary/25 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
       </button>
 
       <p className="text-sm text-gray-500 text-center">
-        Or call us directly at{' '}
-        <a href={`tel:${businessInfo.phoneRaw}`} className="text-secondary font-semibold hover:underline">
-          {businessInfo.phone}
+        O llámenos directamente al{' '}
+        <a href={`tel:${businessInfoEs.phoneRaw}`} className="text-secondary font-semibold hover:underline">
+          {businessInfoEs.phone}
         </a>
-        {' '}for immediate assistance
+        {' '}para asistencia inmediata
       </p>
     </form>
   )
