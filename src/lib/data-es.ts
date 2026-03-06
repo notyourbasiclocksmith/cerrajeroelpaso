@@ -167,7 +167,7 @@ export const serviciosEs: ServicioEs[] = [
     shortSlug: 'reemplazo-key-fob',
     name: 'Reemplazo de Key Fob',
     shortDesc: '¿Tu control remoto del carro no funciona? Reemplazamos y programamos key fobs para todas las marcas en El Paso.',
-    image: '/images/services/smart-key-programming.png',
+    image: '/images/services/key-duplication.png',
     icon: 'Smartphone',
     features: [
       'Key fobs para todas las marcas',
